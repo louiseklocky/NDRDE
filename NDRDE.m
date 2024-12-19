@@ -1,4 +1,4 @@
-function output=NDRDE(FES,D,lu,f,benchmark,run_id)
+function output=NDRDE(FES,D,lu,f,benchmark,run_id,pop_size_NDR)
 
 ub=lu(2,:);
 lb=lu(1,:);
@@ -20,11 +20,10 @@ archive.NP = arc_rate * pop_size;
 archive.popu = zeros(0, D);
 archive.funvalues = zeros(0, 1);
 
-[popold, ~, ~, ~, ~, ~, ~, ~, ~] = Initialization(pop_size, D, benchmark, f);
-popu = popold;
+[popu, ~, ~, ~, ~, ~, ~, ~, ~] = Initialization(pop_size_NDR, D, benchmark, f);
 fit=Evaluation(popu, benchmark, f);
 fit = fit';
-nFES=pop_size;
+nFES=pop_size_NDR;
 
 ibbb=1;
 deit=1;

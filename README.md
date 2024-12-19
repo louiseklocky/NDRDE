@@ -1,0 +1,3 @@
+NDRDE is specifically designed for large-scale optimization problems and demonstrates advantages only for traditional evolutionary algorithms' challenges in optimizing problems with dimensions above 500. As a test of the algorithm, we provide the LSGO test sets from CEC2010 and CEC2013. 
+
+It is important to note that the parameters of NDRDE interact with each other, so the optimal parameters for CEC2013 should be referenced from the relevant paper. When applied to other problems, parameter adjustments are necessary. The most noticeable factors requiring adjustment are the initial population size settings for NDR and LSHADE, followed by the parameters \( TD \) and \( TB \) used for strategy switching.
